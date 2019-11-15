@@ -1,0 +1,308 @@
+:root {
+  --morado: #7b2088;
+  --gris:#212121;
+  --moradoclaro: #9645a1;
+}
+
+/*Globales**/
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+  background-attachment: fixed;
+}
+
+.contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+p {
+  font-size: 20px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 28px;
+  text-align: center;
+  padding: 5px;
+}
+
+h3 {
+  font-size: 24px;
+  margin: 0;
+  line-height: 2;
+  color: #212121;
+}
+
+img {
+  max-width: 100%;
+}
+
+/**Header**/
+.site-header,
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding-right: 15px;
+}
+
+/*Navegacion**/
+.navegacion ul {
+  list-style: none;
+}
+
+.navegacion a {
+  font-size: 18px;
+  font-family: 'Noto Sans SC', sans-serif;
+  text-decoration: none;
+  color: var(--morado);
+  margin: 0 0 0 30px;
+}
+
+.menu > li {
+  position: relative;
+}
+
+.menu > li > a {
+  display: block;
+}
+
+.menu li a:hover {
+  background-color: var(--moradoclaro);
+  color: #fff;
+  transition: all .5s;
+  padding: 5px;
+}
+
+.submenu {
+  position: absolute;
+  padding: 0;
+  display: none;
+}
+
+.submenu li a {
+  display: inline-block;
+}
+
+.menu li:hover .submenu {
+  display: block;
+}
+
+/**Section1**/
+.imagenes {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.imagenes img {
+  width: 350px;
+  height: 240px;
+  border-radius: 2rem;
+  transition: 1s;
+}
+
+.imagenes img:hover {
+  transform: scale(1.2);
+}
+
+.section-nosotros {
+  display: flex;
+  margin: 20px 0;
+  padding: 0 0 10px 0;
+}
+
+/**Section2**/
+.video {
+  text-align: center;
+  padding-bottom: 10px;
+  margin: 20px;
+}
+
+.video video {
+  height: 300px;
+}
+
+/**Main**/
+.galeria img {
+  width: 200px;
+  height: 170px;
+  margin: 10px;
+}
+
+.menu-opciones {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.menu-comida {
+  height: 410px;
+  width: 300px;
+  border: 2px dotted var(--morado);
+  margin: 20px;
+  border-radius: 20px;
+  padding: 2px;
+}
+
+.menu-comida,
+.menu-comida h3 {
+  text-align: center;
+  padding: 0px 10px 0px 10px;
+}
+
+.menu-comida:hover {
+  box-shadow: 0px 0px 34px 18px #706a70;
+}
+
+.menu-comida p {
+  font-size: 16px;
+}
+
+.menu-comida span {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--morado);
+}
+
+.caracteristicas-menu li {
+  list-style: none;
+}
+
+.caracteristicas-menu p {
+  font-size: 15px;
+  text-align: left;
+  color: var(--morado);
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.caracteristicas-menu ul li i {
+  font-size: 18px;
+  color: black;
+}
+
+.ver-todas {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.reservar {
+  background-image: url(../img/romance.jpeg);
+  background-position: center center;
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.reservar:after {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+}
+
+.contenido-reservar {
+  color: white;
+  padding: 20px;
+  z-index: 1;
+}
+
+.contenido-reservar h3 {
+  color: #fff;
+  font-size: 28px;
+  padding: 20px 0 40px 40px;
+}
+
+form {
+  z-index: 1;
+  border: 2px dotted #fff;
+  color: #fff;
+}
+
+.contenedor-campos {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 300px;
+  width: 500px;
+}
+
+.campo {
+  flex: 0 0 calc(50% - 1rem);
+  margin: 3px;
+}
+
+.campo label {
+  display: flex;
+  flex: 0 0 90%;
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+.campo input:not([type="radio"]) {
+  height: 30px;
+  width: 100%;
+}
+
+.campo textarea {
+  width: 450px;
+  height: 90px;
+}
+
+.boton {
+  padding: 15px 20px;
+  background-color: #fff;
+  color: var(--morado);
+  font-family: 'Noto Sans SC', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  text-decoration: none;
+  width: 100px;
+  height: 50px;
+  transition: widht 200s;
+}
+
+.boton:active {
+  width: 110px;
+  height: 55px;
+}
+
+.enviar {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px;
+}
+
+/*Footer*/
+.site-footer {
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.iconos-redes {
+  font-size: 35px;
+  color: var(--morado);
+}
